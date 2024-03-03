@@ -5,7 +5,7 @@ int Application::run() {
     Matrix tab;
     int select;
     int dimension = tab.getDim();
-    int buff;
+    number buff;
 
     while (1) {
         select = menu();

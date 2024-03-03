@@ -62,7 +62,7 @@ number Matrix::getDet() {
 number Matrix::det(std::vector<std::vector<number>> matr) {
     std::vector<std::vector<number>> minor;
     int i = 0, sign = 1;
-    number result = 0;
+    number result;
     if (matr.size() == 1) {
         return matr[0][0];
     }
@@ -72,7 +72,7 @@ number Matrix::det(std::vector<std::vector<number>> matr) {
     if (matr.size() > 2) {
         for (i = 0; i < matr.size(); i++) {
             minor = deleteRowAndColumn(matr, i, 0);
-            result = result + sign * matr[i][0] * det(minor);
+            result = result + number(sign) * matr[i][0] * det(minor);
             sign = -sign;
         }
     }
@@ -103,7 +103,7 @@ void Matrix::printMatrix()
 }
 
 
-number Matrix::getRank() {
+int Matrix::getRank() {
     int rank = 0;
     int q = 1;
 

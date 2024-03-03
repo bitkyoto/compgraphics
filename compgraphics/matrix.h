@@ -5,10 +5,7 @@ class Matrix
 {
 private:
     int dim = 3;
-    std::vector<std::vector<number>> M = { {1, 2, 3},{4, 5, 6},{7, 8, 9} };
-    std::vector<std::vector<number>> deleteRowAndColumn(std::vector<std::vector<number>> source, int index_1, int index_2);
-    number det(std::vector<std::vector<number>> source);
-
+    std::vector<std::vector<number>> M = { {number(1,2), number(2,2), number(3,3)},{number(4,4), number(5,5), number(6,6)},{number(7,7), number(8,8),number(9,9)}};
 public:
 
     int getDim();
@@ -22,7 +19,10 @@ public:
 
     void transpose();
 
-    number getRank();
+    int getRank();
 
     void printMatrix();
+
+    std::vector<std::vector<number>> deleteRowAndColumn(std::vector<std::vector<number>> source, int index_1, int index_2);
+    number det(std::vector<std::vector<number>> source);
 };

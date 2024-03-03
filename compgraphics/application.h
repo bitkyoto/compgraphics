@@ -3,7 +3,8 @@
 
 class Application
 {
-public:
+private:
     int menu();
+public:
     int run();
 };

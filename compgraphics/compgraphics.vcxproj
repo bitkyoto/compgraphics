@@ -131,11 +131,13 @@
     <ClCompile Include="application.cpp" />
     <ClCompile Include="compgraphics.cpp" />
     <ClCompile Include="matrix.cpp" />
+    <ClCompile Include="TComplex.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="application.h" />
     <ClInclude Include="matrix.h" />
     <ClInclude Include="number.h" />
+    <ClInclude Include="TComplex.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
